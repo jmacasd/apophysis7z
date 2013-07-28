@@ -37,6 +37,7 @@ type
     Label11: TLabel;
     lblFlamecom: TLabel;
     Bevel1: TBevel;
+    Label6: TLabel;
     Label7: TLabel;
     Label8: TLabel;
     Label9: TLabel;
@@ -45,11 +46,13 @@ type
     Label14: TLabel;
     Bevel3: TBevel;
     Label17: TLabel;
+    Label18: TLabel;
     Label16: TLabel;
     Label2: TLabel;
     Bevel2: TBevel;
     Label19: TLabel;
     Label5: TLabel;
+    Label20: TLabel;
     Image1: TImage;
     procedure btnOKClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
@@ -100,6 +103,8 @@ end;
 procedure TAboutForm.FormCreate(Sender: TObject);
 var s1, s2, s3:string;
 begin
+//  Label2.Caption:='version 2.08.500.7X.update'+ApophysisSVN;
+//  Label16.Caption := APP_BUILD;
   btnOK.Caption := TextByKey('common-close');
   if (LanguageFile <> AvailableLanguages.Strings[0]) and (LanguageFile <> '') then
   begin
@@ -108,6 +113,7 @@ begin
     Label5.Visible := (s1 <> '') and (s3 <> '');
     Label5.Caption := s1 + ' translation contributed by: ' + s3;
   end;
+  Label20.Caption := APP_VERSION;
 end;
 
 end.

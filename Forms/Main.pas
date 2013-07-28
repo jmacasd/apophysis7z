@@ -27,11 +27,6 @@ unit Main;
 
 //{$define VAR_STR}
 
-{$ifdef VER240}
-  // we need to update TMS Scripter to the XE3 version...
-  {$Define DisableScripting}
-{$endif}
-
 interface
 
 uses
@@ -44,7 +39,7 @@ uses
   LibXmlParser, LibXmlComps, PngImage, XPMan,
   StrUtils, LoadTracker, CheckLst,
   CommandLine, RegularExpressionsCore, MissingPlugin, Base64, Translation,
-  RegexHelper;//, WinInet;
+  RegexHelper, Chaotica;//, WinInet;
 
 const
   PixelCountMax = 32768;
@@ -239,11 +234,13 @@ type
     Image: TImage;
     pnlLSPFrame: TPanel;
     LoadSaveProgress: TProgressBar;
+    mnuExportChaotica: TMenuItem;
     mnuResumeRender: TMenuItem;
     mnuManual: TMenuItem;
     ToolButton19: TToolButton;
     mnuCurves: TMenuItem;
     N17: TMenuItem;
+    mnuTrace: TMenuItem;
     procedure mnuManualClick(Sender: TObject);
     procedure mnuReportFlameClick(Sender: TObject);
     procedure mnuTurnFlameToScriptClick(Sender: TObject);
@@ -320,6 +317,7 @@ type
     procedure mnuPasteClick(Sender: TObject);
     procedure mnuCopyClick(Sender: TObject);
     procedure mnuExportFlameClick(Sender: TObject);
+    procedure mnuExportChaoticaClick(Sender: TObject);
 
     procedure ListXmlScannerStartTag(Sender: TObject; TagName: string;
       Attributes: TAttrList);
@@ -498,6 +496,7 @@ var
   UpdateError:boolean;
   AboutToExit:boolean;
 
+  ApophysisSVN:string; //APP_VERSION;
   AppVersionString:string; //APP_NAME+'.'+APP_VERSION;
 
 implementation
@@ -720,6 +719,7 @@ begin
 	mnuOpenGradient.Caption := TextByKey('main-menu-file-gradientbrowser');
 	mnuSaveUPR.Caption := TextByKey('main-menu-file-exportupr');
 	mnuExportFlame.Caption := TextByKey('main-menu-file-exportflame');
+  mnuExportChaotica.Caption := TextByKey('main-menu-file-exportchaotica');
 	mnuImportGimp.Caption := TextByKey('main-menu-file-importgimp');
 	mnuPostSheep.Caption := TextByKey('main-menu-file-submitsheep');
 	mnuRandomBatch.Caption := TextByKey('main-menu-file-randombatch');
@@ -3232,7 +3232,9 @@ begin
   //KnownPlugins := TList.Create;
 
   FNrThreads := 1;
-  AppVersionString:=APP_NAME;
+
+  ApophysisSVN:=APP_VERSION;
+  AppVersionString:=APP_NAME+' '+APP_VERSION;
 
   SubstSource := TStringList.Create;
   SubstTarget := TStringList.Create;
@@ -3281,6 +3283,8 @@ begin
   AvailableLanguages.Add('');
   ListLanguages;
 
+  C_SyncDllPlugins;
+
   cmdl := TCommandLine.Create;
   cmdl.Load;
 
@@ -3296,6 +3300,7 @@ begin
   Caption := AppVersionString + APP_BUILD;
 
   mnuExportFLame.Enabled := FileExists(flam3Path);
+  mnuExportChaotica.Enabled := FileExists(chaoticaPath + '\32bit\chaotica.exe');
 
   FMouseMoveState := msDrag;
   LimitVibrancy := False;
@@ -6949,6 +6954,13 @@ begin
     str := str + #13#10 + '  - ' + MainCP.used_plugins[i];
   end;
   LoadForm.Output.Text := LoadForm.Output.Text + #13#10 + str + #13#10;
+end;
+
+procedure TMainForm.mnuExportChaoticaClick(Sender: TObject);
+begin
+  //
+  MainCP.FillUsedPlugins;
+  C_ExecuteChaotica(FlameToXml(MainCp, false, false), MainCp.used_plugins, UseX64IfPossible);
 end;
 
 procedure TMainForm.mnuManualClick(Sender: TObject);

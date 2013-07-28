@@ -66,6 +66,10 @@ object RenderForm: TRenderForm
     object TabSettings: TTabSheet
       Caption = 'Settings'
       ImageIndex = 18
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       DesignSize = (
         473
         344)
@@ -660,6 +664,10 @@ object RenderForm: TRenderForm
     object TabOutput: TTabSheet
       Caption = 'Output'
       ImageIndex = 38
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object Output: TMemo
         Left = 0
         Top = 0
@@ -696,9 +704,19 @@ object RenderForm: TRenderForm
         Width = 50
       end>
   end
-  object btnSaveLog: TButton
+  object btnDonate: TButton
     Left = 8
-    Top = 419
+    Top = 420
+    Width = 73
+    Height = 25
+    Anchors = [akLeft, akBottom]
+    Caption = 'Donate'
+    TabOrder = 6
+    OnClick = btnDonateClick
+  end
+  object btnSaveLog: TButton
+    Left = 88
+    Top = 420
     Width = 73
     Height = 25
     Anchors = [akLeft, akBottom]
@@ -714,7 +732,7 @@ object RenderForm: TRenderForm
     Width = 481
     Height = 25
     Anchors = [akLeft, akRight, akBottom]
-    TabOrder = 6
+    TabOrder = 7
   end
   object SaveDialog: TSaveDialog
     Left = 168

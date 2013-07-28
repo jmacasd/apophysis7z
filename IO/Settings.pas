@@ -812,6 +812,22 @@ begin
       end else begin
         HelpPath := ExtractFilePath(Application.ExeName) + 'Apophysis 7X.chm';
       end;
+
+      if Registry.ValueExists('ChaoticaPath') then begin
+        ChaoticaPath := Registry.ReadString('ChaoticaPath');
+      end else begin
+        ChaoticaPath := '';
+      end;
+      if Registry.ValueExists('ChaoticaPath64') then begin
+        ChaoticaPath64 := Registry.ReadString('ChaoticaPath64');
+      end else begin
+        ChaoticaPath64 := '';
+      end;
+      if Registry.ValueExists('UseX64IfPossible') then begin
+        UseX64IfPossible := Registry.ReadBool('UseX64IfPossible');
+      end else begin
+        UseX64IfPossible := false;
+      end;
     end
     else
     begin
@@ -904,6 +920,9 @@ begin
       LineThirdsColor := $0000FF;
       LineGRColor := $00FF00;
       EnableGuides := false;
+      ChaoticaPath := '';
+      ChaoticaPath64 := '';
+      UseX64IfPossible := false;
     end;
     Registry.CloseKey;
 
@@ -1371,6 +1390,9 @@ begin
       Registry.WriteInteger('LineThirdsColor', LineThirdsColor);
       Registry.WriteInteger('LineGRColor', LineGRColor);
       Registry.WriteBool('EnableGuides', EnableGuides);
+      Registry.WriteString('ChaoticaPath', ChaoticaPath);
+      Registry.WriteString('ChaoticaPath64', ChaoticaPath64);
+      Registry.WriteBool('UseX64IfPossible', UseX64IfPossible);
 
       Registry.WriteBool('ConfirmDelete', ConfirmDelete);
       Registry.WriteBool('OldPaletteFormat', OldPaletteFormat);

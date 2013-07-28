@@ -24,13 +24,13 @@ unit RenderingImplementation;
 
 {$ifdef Apo7X64}
 {$else}
-//  {$define _ASM_}
+  {$define _ASM_}
 {$endif}
 
 interface
 
 uses
-{$ifndef _ASM_}
+{$ifdef Apo7X64}
 {$else}
 AsmRandom,
 {$endif}

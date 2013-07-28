@@ -1523,7 +1523,7 @@ object AboutForm: TAboutForm
   end
   object Label3: TLabel
     Left = 16
-    Top = 180
+    Top = 196
     Width = 166
     Height = 13
     Caption = 'This application was created using:'
@@ -1552,21 +1552,21 @@ object AboutForm: TAboutForm
   end
   object Label10: TLabel
     Left = 16
-    Top = 230
+    Top = 246
     Width = 178
     Height = 13
     Caption = 'flame - cosmic recursive fractal flames'
   end
   object Label11: TLabel
     Left = 16
-    Top = 254
+    Top = 270
     Width = 178
     Height = 13
-    Caption = 'Copyright '#169' 1992-2013  Scott Draves'
+    Caption = 'Copyright '#169' 1992-2012  Scott Draves'
   end
   object lblFlamecom: TLabel
     Left = 16
-    Top = 270
+    Top = 286
     Width = 79
     Height = 13
     Cursor = crHandPoint
@@ -1582,13 +1582,26 @@ object AboutForm: TAboutForm
   end
   object Bevel1: TBevel
     Left = 16
-    Top = 242
+    Top = 258
     Width = 385
     Height = 9
     Shape = bsBottomLine
   end
+  object Label6: TLabel
+    Left = 140
+    Top = 116
+    Width = 110
+    Height = 13
+    Caption = 'Copyright '#169' 2005-2008'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+  end
   object Label7: TLabel
-    Left = 175
+    Left = 140
     Top = 148
     Width = 71
     Height = 13
@@ -1604,8 +1617,8 @@ object AboutForm: TAboutForm
     OnClick = DevelopersClick
   end
   object Label8: TLabel
-    Left = 252
-    Top = 148
+    Left = 140
+    Top = 164
     Width = 53
     Height = 13
     Cursor = crHandPoint
@@ -1620,8 +1633,8 @@ object AboutForm: TAboutForm
     OnClick = DevelopersClick
   end
   object Label9: TLabel
-    Left = 99
-    Top = 148
+    Left = 16
+    Top = 164
     Width = 70
     Height = 13
     Caption = 'Ronald Hordijk'
@@ -1629,9 +1642,9 @@ object AboutForm: TAboutForm
   object Label12: TLabel
     Left = 16
     Top = 116
-    Width = 56
+    Width = 110
     Height = 13
-    Caption = 'Contributors'
+    Caption = 'Copyright '#169' 2001-2004'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
@@ -1641,7 +1654,7 @@ object AboutForm: TAboutForm
   end
   object Label13: TLabel
     Left = 16
-    Top = 204
+    Top = 220
     Width = 69
     Height = 13
     Cursor = crHandPoint
@@ -1657,7 +1670,7 @@ object AboutForm: TAboutForm
   end
   object Label14: TLabel
     Left = 96
-    Top = 204
+    Top = 220
     Width = 55
     Height = 13
     Cursor = crHandPoint
@@ -1679,7 +1692,7 @@ object AboutForm: TAboutForm
     Shape = bsBottomLine
   end
   object Label17: TLabel
-    Left = 311
+    Left = 264
     Top = 148
     Width = 65
     Height = 13
@@ -1693,6 +1706,19 @@ object AboutForm: TAboutForm
     Font.Style = [fsUnderline]
     ParentFont = False
     OnClick = DevelopersClick
+  end
+  object Label18: TLabel
+    Left = 264
+    Top = 116
+    Width = 110
+    Height = 13
+    Caption = 'Copyright '#169' 2009-2012'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
   end
   object Label16: TLabel
     Left = 8
@@ -1715,14 +1741,14 @@ object AboutForm: TAboutForm
   end
   object Bevel2: TBevel
     Left = 16
-    Top = 190
+    Top = 206
     Width = 385
     Height = 11
     Shape = bsBottomLine
   end
   object Label19: TLabel
     Left = 160
-    Top = 204
+    Top = 220
     Width = 77
     Height = 13
     Cursor = crHandPoint
@@ -1743,6 +1769,13 @@ object AboutForm: TAboutForm
     Height = 13
     AutoSize = False
     Visible = False
+  end
+  object Label20: TLabel
+    Left = 16
+    Top = 316
+    Width = 297
+    Height = 13
+    AutoSize = False
   end
   object btnOK: TButton
     Left = 320

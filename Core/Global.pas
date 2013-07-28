@@ -63,10 +63,11 @@ function GetEnvVarValue(const VarName: string): string;
 
 const
   APP_NAME: string = 'Apophysis 7x';
+  APP_VERSION: string = 'Version 15D';
   {$ifdef Apo7X64}
-  APP_BUILD: string = '64 bit';
+  APP_BUILD: string = ' - 64 bit';
   {$else}
-  APP_BUILD: string = '32 bit';
+  APP_BUILD: string = ' - 32 bit';
   {$endif}
   MAX_TRANSFORMS: integer = 100;
   prefilter_white: integer = 1024;
@@ -238,6 +239,9 @@ var
   defLibrary: string;
   LimitVibrancy: Boolean;
   DefaultPalette: TColorMap;
+
+  ChaoticaPath, ChaoticaPath64: string;
+  UseX64IfPossible: boolean;
 
   AutoOpenLog: Boolean;
   AutoSaveEnabled: Boolean;

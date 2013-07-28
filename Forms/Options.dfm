@@ -203,7 +203,7 @@ object OptionsForm: TOptionsForm
     Top = 8
     Width = 475
     Height = 396
-    ActivePage = PathsPage
+    ActivePage = GeneralPage
     Anchors = [akLeft, akTop, akRight, akBottom]
     MultiLine = True
     TabOrder = 3
@@ -2795,6 +2795,165 @@ object OptionsForm: TOptionsForm
           '5'
           '10')
       end
+      object GroupBox3: TGroupBox
+        Left = 8
+        Top = 264
+        Width = 457
+        Height = 73
+        Caption = 'Chaotica 0.45+'
+        TabOrder = 16
+        DesignSize = (
+          457
+          73)
+        object btnChaotica: TSpeedButton
+          Left = 425
+          Top = 18
+          Width = 24
+          Height = 24
+          Hint = 'Browse...'
+          Anchors = [akTop, akRight]
+          Flat = True
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Glyph.Data = {
+            36030000424D3603000000000000360000002800000010000000100000000100
+            18000000000000030000120B0000120B00000000000000000000FF00FFFF00FF
+            FF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00
+            FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF
+            00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF75848F66808F
+            607987576E7B4E626F4456613948522E3A43252E351B222914191E0E12160E13
+            18FF00FFFF00FFFF00FF77879289A1AB6AB2D4008FCD008FCD008FCD048CC708
+            88BE0F82B4157CA91B779F1F7296224B5C87A2ABFF00FFFF00FF7A8A957EBED3
+            8AA4AE7EDCFF5FCFFF55CBFF4CC4FA41BCF537B3F02EAAEB24A0E5138CD42367
+            805E696DFF00FFFF00FF7D8E9879D2EC8BA4AD89C2CE71D8FF65D3FF5CCEFF51
+            C9FE49C1FA3FB9F534B0EE29A8E91085CD224B5B98B2BAFF00FF80919C81D7EF
+            7DC5E08CA6B080DDFE68D3FF67D4FF62D1FF58CDFF4EC7FC46BEF73BB6F231AC
+            EC2569817A95A1FF00FF83959F89DCF18CE2FF8DA8B18CBAC774D8FF67D4FF67
+            D4FF67D4FF5FD0FF54CDFF4BC5FC41BBF72EA2DB51677498B2BA869AA392E1F2
+            98E8FD80C4DE8EA7B081DEFD84E0FF84E0FF84E0FF84E0FF81DFFF7BDDFF74D8
+            FF6BD6FF56A9D18F9BA4889CA59AE6F39FEBFB98E8FE8BACB98BACB98AAAB788
+            A6B386A3AF839FAA819AA67F95A17C919D7A8E99798B957788938BA0A8A0EAF6
+            A6EEF99FEBFB98E8FE7ADAFF67D4FF67D4FF67D4FF67D4FF67D4FF67D4FF7788
+            93FF00FFFF00FFFF00FF8EA2ABA7EEF6ABF0F7A6EEF99FEBFB98E8FD71D4FB89
+            9EA78699A382949F7E909A7A8C97778893FF00FFFF00FFFF00FF8FA4ACA0D2DA
+            ABF0F7ABF0F7A6EEF99FEBFB8DA1AAB5CBD0FF00FFFF00FFFF00FFFF00FFFF00
+            FFFF00FFFF00FFFF00FFBDCED48FA4AC8FA4AC8FA4AC8FA4AC8FA4ACB5CBD0FF
+            00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF
+            FF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00
+            FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF
+            00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF}
+          ParentFont = False
+          ParentShowHint = False
+          ShowHint = True
+          OnClick = btnChaoticaClick
+        end
+        object btnChaotica64: TSpeedButton
+          Left = 425
+          Top = 98
+          Width = 24
+          Height = 24
+          Hint = 'Browse...'
+          Anchors = [akTop, akRight]
+          Flat = True
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Glyph.Data = {
+            36030000424D3603000000000000360000002800000010000000100000000100
+            18000000000000030000120B0000120B00000000000000000000FF00FFFF00FF
+            FF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00
+            FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF
+            00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF75848F66808F
+            607987576E7B4E626F4456613948522E3A43252E351B222914191E0E12160E13
+            18FF00FFFF00FFFF00FF77879289A1AB6AB2D4008FCD008FCD008FCD048CC708
+            88BE0F82B4157CA91B779F1F7296224B5C87A2ABFF00FFFF00FF7A8A957EBED3
+            8AA4AE7EDCFF5FCFFF55CBFF4CC4FA41BCF537B3F02EAAEB24A0E5138CD42367
+            805E696DFF00FFFF00FF7D8E9879D2EC8BA4AD89C2CE71D8FF65D3FF5CCEFF51
+            C9FE49C1FA3FB9F534B0EE29A8E91085CD224B5B98B2BAFF00FF80919C81D7EF
+            7DC5E08CA6B080DDFE68D3FF67D4FF62D1FF58CDFF4EC7FC46BEF73BB6F231AC
+            EC2569817A95A1FF00FF83959F89DCF18CE2FF8DA8B18CBAC774D8FF67D4FF67
+            D4FF67D4FF5FD0FF54CDFF4BC5FC41BBF72EA2DB51677498B2BA869AA392E1F2
+            98E8FD80C4DE8EA7B081DEFD84E0FF84E0FF84E0FF84E0FF81DFFF7BDDFF74D8
+            FF6BD6FF56A9D18F9BA4889CA59AE6F39FEBFB98E8FE8BACB98BACB98AAAB788
+            A6B386A3AF839FAA819AA67F95A17C919D7A8E99798B957788938BA0A8A0EAF6
+            A6EEF99FEBFB98E8FE7ADAFF67D4FF67D4FF67D4FF67D4FF67D4FF67D4FF7788
+            93FF00FFFF00FFFF00FF8EA2ABA7EEF6ABF0F7A6EEF99FEBFB98E8FD71D4FB89
+            9EA78699A382949F7E909A7A8C97778893FF00FFFF00FFFF00FF8FA4ACA0D2DA
+            ABF0F7ABF0F7A6EEF99FEBFB8DA1AAB5CBD0FF00FFFF00FFFF00FFFF00FFFF00
+            FFFF00FFFF00FFFF00FFBDCED48FA4AC8FA4AC8FA4AC8FA4AC8FA4ACB5CBD0FF
+            00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF
+            FF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00
+            FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF
+            00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF}
+          ParentFont = False
+          ParentShowHint = False
+          ShowHint = True
+          Visible = False
+          OnClick = btnChaoticaClick
+        end
+        object Panel47: TPanel
+          Left = 8
+          Top = 20
+          Width = 129
+          Height = 21
+          Cursor = crArrow
+          BevelOuter = bvLowered
+          Caption = 'Location'
+          ParentShowHint = False
+          ShowHint = True
+          TabOrder = 1
+        end
+        object cbC64: TCheckBox
+          Left = 8
+          Top = 48
+          Width = 441
+          Height = 17
+          Anchors = [akLeft, akTop, akRight]
+          Caption = 'Use x64-version if possible'
+          TabOrder = 2
+        end
+        object txtChaotica: TEdit
+          Left = 136
+          Top = 20
+          Width = 289
+          Height = 21
+          HelpContext = 1000
+          Anchors = [akLeft, akTop, akRight]
+          ParentShowHint = False
+          ShowHint = False
+          TabOrder = 0
+        end
+        object Panel49: TPanel
+          Left = 8
+          Top = 100
+          Width = 129
+          Height = 21
+          Cursor = crArrow
+          BevelOuter = bvLowered
+          Caption = 'File name (x64)'
+          ParentShowHint = False
+          ShowHint = True
+          TabOrder = 3
+          Visible = False
+        end
+        object txtChaotica64: TEdit
+          Left = 136
+          Top = 100
+          Width = 289
+          Height = 21
+          HelpContext = 1000
+          Anchors = [akLeft, akTop, akRight]
+          ParentShowHint = False
+          ShowHint = False
+          TabOrder = 4
+          Visible = False
+        end
+      end
       object Panel50: TPanel
         Left = 8
         Top = 130
@@ -2805,7 +2964,7 @@ object OptionsForm: TOptionsForm
         Caption = 'Plugin folder'
         ParentShowHint = False
         ShowHint = True
-        TabOrder = 16
+        TabOrder = 17
       end
       object txtPluginFolder: TEdit
         Left = 136
@@ -2816,7 +2975,7 @@ object OptionsForm: TOptionsForm
         Anchors = [akLeft, akTop, akRight]
         ParentShowHint = False
         ShowHint = False
-        TabOrder = 17
+        TabOrder = 18
       end
     end
   end

@@ -23,13 +23,6 @@ program Apophysis7X;
 {$R 'Resources\Apophysis7X.res'}
 {$SetPEFlags $20}
 
-{$ifdef VER240}
-  // we need to update TMS Scripter to the XE3 version...
-  {$ifndef DisableScripting}
-    {$Define DisableScripting}
-  {$endif}
-{$endif}
-
 uses
 
 {-- BASIC --}
@@ -58,6 +51,7 @@ uses
   MissingPlugin in 'IO\MissingPlugin.pas',
   Settings in 'IO\Settings.pas',
   Translation in 'Core\Translation.pas',
+  Chaotica in 'Core\Chaotica.pas',
   ParameterIO in 'IO\ParameterIO.pas',
   Bezier in 'Core\Bezier.pas',
 
@@ -211,11 +205,7 @@ begin
   {$endif}
 
   Application.UpdateFormatSettings := False;
-  {$ifdef VER240}
-    FormatSettings.DecimalSeparator := '.';
-  {$else}
-    DecimalSeparator := '.';
-  {$endif}
+  DecimalSeparator := '.';
   Application.Run;
 end.
 

@@ -527,6 +527,7 @@ begin
 	Add('options-tab-environment-rememberlastopen', 'Remember last open parameters ');
 	Add('options-tab-environment-autosave', 'Enable autosave ');
 	Add('options-tab-environment-savefrequency', 'Save frequency ');
+  Add('options-tab-environment-usex64chaotica', 'Use 64-bit version if possible');
 	Add('preview-title', 'Preview');
 	Add('save-title', 'Save');
 	Add('save-name', 'Name');
@@ -566,6 +567,7 @@ begin
 	Add('main-menu-file-gradientbrowser', 'Gradient browser...');
 	Add('main-menu-file-exportupr', 'Export UPR...');
 	Add('main-menu-file-exportflame', 'Export to flam3...');
+	Add('main-menu-file-exportchaotica', 'Export to Chaotica...');
 	Add('main-menu-file-importgimp', 'Import GIMP parameters...');
 	Add('main-menu-file-submitsheep', 'Submit sheep');
 	Add('main-menu-file-randombatch', 'Random batch');
@@ -638,6 +640,9 @@ begin
 	Add('main-status-loadingerrorcount', '%d errors in flame');
 	Add('main-status-morepluginsneeded', 'The flame "%s" requires the following additional %s:');
   Add('main-status-noautosave', 'No autosave present.');
+  Add('main-status-chaoticacompatmissing', 'The variation compatibility data file can not be found at the configured location of Chaotica. The rendering result may look different from the preview. Do you want to proceed?');
+  Add('main-status-nochaotica', 'The executable file of Chaotica could not be found. Please check your settings.');
+  Add('main-status-oldchaotica', 'The rendering result may look different from the preview. Do you want to proceed?');
 	Add('main-report-transformcount', 'Transform count: %d');
 	Add('main-report-finaltransform', 'Has final transform: %s');
 	Add('main-report-usedplugins', 'Used plugins:');

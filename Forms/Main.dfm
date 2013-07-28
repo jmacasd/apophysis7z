@@ -2912,7 +2912,7 @@ object MainForm: TMainForm
     Left = 104
     Top = 280
     Bitmap = {
-      494C0101460050005C0010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C010146005000540010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000002001000001002000000000000020
       0100000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -5299,7 +5299,7 @@ object MainForm: TMainForm
     Left = 24
     Top = 224
     Bitmap = {
-      494C010101004400500010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C010101004400480010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000001000000001002000000000000010
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -5508,6 +5508,11 @@ object MainForm: TMainForm
         Hint = 'Disabled in this "3D hack" version'
         ShortCut = 16472
         OnClick = mnuExportFLameClick
+      end
+      object mnuExportChaotica: TMenuItem
+        Caption = 'Export to Chaotica...'
+        ShortCut = 49240
+        OnClick = mnuExportChaoticaClick
       end
       object mnuImportGimp: TMenuItem
         Caption = 'Import Gimp Parameters'
@@ -5829,6 +5834,10 @@ object MainForm: TMainForm
       end
       object N14: TMenuItem
         Caption = '-'
+      end
+      object mnuTrace: TMenuItem
+        Caption = 'Trace log...'
+        OnClick = mnuTraceClick
       end
       object mnuOptions: TMenuItem
         Caption = 'Options...'

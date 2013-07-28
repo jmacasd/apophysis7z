@@ -79,6 +79,7 @@ type
     pnlOversample: TPanel;
     pnlLimit: TPanel;
     pnlTarget: TPanel;
+    btnDonate: TButton;
     btnSaveLog: TButton;
     chkBinary: TCheckBox;
     ProgressBar2: TProgressBar;
@@ -86,6 +87,7 @@ type
     chkSaveIncompleteRenders: TCheckBox;
     lblCPUCores: TLabel;
     procedure btnSaveLogClick(Sender: TObject);
+    procedure btnDonateClick(Sender: TObject);
     procedure cbMaxMemoryChange(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
@@ -1291,6 +1293,11 @@ begin
   chkPostProcess.Enabled := not IsLimitingMemory;
   chkSaveIncompleteRenders.Enabled := not IsLimitingMemory;
   //btnRender.Enabled := (ApproxMemory <= PhysicalMemory) or (cbMaxMemory.ItemIndex > 0);
+end;
+
+procedure TRenderForm.btnDonateClick(Sender: TObject);
+begin
+  WinShellExecute('open', 'http://bit.ly/xwdonate');
 end;
 
 procedure TRenderForm.btnSaveLogClick(Sender: TObject);
